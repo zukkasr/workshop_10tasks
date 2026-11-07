@@ -35,14 +35,14 @@
 /* 05. Из колонки в ряд */
 .task-05 .actions{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
 }
 
 @media (max-width:640px){
   .task-05 .actions{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 12px;
   }
 }
