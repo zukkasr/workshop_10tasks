@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Практикум по адаптивной вёрстке</title>
+  <link rel="stylesheet" href="lab.css">
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+  <main class="lab-wrap lab-main">
+    <section class="lab-card" id="exercise-01">
+      <p class="lab-label">01 · Проценты</p>
+      <h2>Полоска в половину контейнера</h2>
+      <p>Сделайте синюю полоску <code>.meter</code> шириной 50% от её родителя <code>.track</code>. Попробуйте менять ширину окна.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360 и 800 px синяя полоска занимает ровно половину серой дорожки.</p>
+      <div class="lab-stage task-01">
+        <div class="track">
+          <div class="meter"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-02">
+      <p class="lab-label">02 · Ограничение ширины</p>
+      <h2>Карточка с полями</h2>
+      <p>Задайте <code>.note</code> ширину 90% от площадки, ограничьте её до 420 px с помощью <code>max-width</code> и расположите по центру. Внутренние отступы должны входить в заданную ширину.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360 px карточка занимает 90% доступной ширины внутри рамки. На 900 px её ширина равна 420 px. Поля слева и справа одинаковые.</p>
+      <div class="lab-stage task-02">
+        <div class="note">Небольшая карточка с заметкой</div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-03">
+      <p class="lab-label">03 · Высота окна</p>
+      <h2>Баннер, который растёт вместе с окном</h2>
+      <p>Задайте баннеру <code>.banner</code> минимальную высоту 25% от высоты окна. Используйте <code>vh</code>. Содержимое должно помещаться, даже если текста станет больше.</p>
+      <p class="lab-check"><strong>Проверка.</strong> При высоте окна 400 px баннер занимает 100 px, а при 800 px — 200 px. Ширину окна при этом можно оставить прежней.</p>
+      <div class="lab-stage task-03">
+        <div class="banner">Афиша на выходные</div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-04">
+      <p class="lab-label">04 · Первый медиазапрос</p>
+      <h2>Заголовок в двух размерах</h2>
+      <p>Для <code>.headline</code> задайте размер 24 px по умолчанию. Начиная с 600 px сделайте его 40 px. Используйте <code>@media</code> и <code>min-width</code>.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 599 px размер 24 px. На 600 px размер 40 px.</p>
+      <div class="lab-stage task-04">
+        <h3 class="headline">Городские прогулки</h3>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-05">
+      <p class="lab-label">05 · Flexbox и медиазапрос</p>
+      <h2>Из колонки в ряд</h2>
+      <p>Сделайте <code>.actions</code> flex-контейнером с промежутком 12 px. На узком экране расположите кнопки друг под другом. От 640 px переключите направление на горизонтальное.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 639 px кнопки идут сверху вниз. На 640 px они стоят в одном ряду, а промежуток остаётся 12 px.</p>
+      <div class="lab-stage task-05">
+        <div class="actions">
+          <button type="button">Сохранить</button>
+          <button type="button">Отмена</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-06">
+      <p class="lab-label">06 · Своя разметка и rem</p>
+      <h2>Меню из трёх ссылок</h2>
+      <p>Добавьте <code>nav</code> с классом <code>.menu</code> и три ссылки на задания этой страницы. Используйте адреса <code>#exercise-01</code>, <code>#exercise-02</code> и <code>#exercise-03</code>. Сделайте ссылки колонкой на узком экране и рядом от 600 px. Задайте промежуток между ними и внутренний отступ каждой ссылки через <code>rem</code>, например по <code>0.5rem</code>.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360 px ссылки стоят в столбик, на 600 px — в ряд. Нажатие переносит к нужному заданию.</p>
+      <div class="lab-stage task-06">
+        <!-- 06. Добавьте меню здесь. -->
+         <nav class="menu">
+          <a href="#exercise-01">Первое</a>
+          <a href="#exercise-02">Второе</a>
+          <a href="#exercise-03">Третье</a>
+         </nav>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-07">
+      <p class="lab-label">07 · Два медиазапроса</p>
+      <h2>Каталог на одну, две и три колонки</h2>
+      <p>Добавьте контейнер <code>.catalog</code> и шесть карточек <code>.item</code> с короткими названиями. Используйте Flexbox с переносом строк или CSS Grid. Сделайте одну колонку по умолчанию, две от 600 px и три от 900 px. Между карточками оставьте 12 px.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360, 700 и 960 px в первой строке помещаются соответственно одна, две и три карточки. Карточки в каждой строке одинаковой ширины.</p>
+      <div class="lab-stage task-07">
+        <!-- 07. Добавьте каталог здесь. -->
+        <div class="catalog">
+          <div class="item">Игры</div>
+          <div class="item">Книги</div>
+          <div class="item">Фотографии</div>
+          <div class="item">Модельки</div>
+          <div class="item">Одежда</div>
+          <div class="item">Унитазы</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-08">
+      <p class="lab-label">08 · Резиновое изображение</p>
+      <h2>Фото с подписью</h2>
+      <p>Добавьте <code>figure</code> с классом <code>.photo</code>, вложите <code>img</code> и <code>figcaption</code>. Возьмите файл <code>mountains.svg</code> из папки проекта и добавьте изображению осмысленный <code>alt</code>. Уберите стандартные внешние отступы у <code>figure</code>. На узком экране картинка должна занимать всю ширину блока. От 700 px поставьте подпись рядом с изображением, которому отведите 55% ширины блока.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360 px подпись под картинкой, на 700 px — справа. Картинка сохраняет пропорции и не выходит за рамку.</p>
+      <div class="lab-stage task-08">
+        <!-- 08. Добавьте изображение и подпись здесь. -->
+        <figure class="photo">
+          <img src="mountains.svg" alt="Горные вершины на фоне неба">
+          <figcaption>Горный пейзаж - иллюстрация для нашего небольшого путешествия.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-09">
+      <p class="lab-label">09 · Плавный размер через vw</p>
+      <h2>Первый экран с гибкой типографикой</h2>
+      <p>Добавьте блок <code>.hero</code> с заголовком <code>h3</code> и коротким абзацем. Задайте блоку минимальную высоту <code>35vh</code> и отцентрируйте содержимое с помощью Flexbox. Сделайте размер заголовка равным <code>6vw</code>, но ограничьте его снизу 24 px, а сверху 56 px. Для ограничения пригодится <code>clamp(минимум, желаемый размер, максимум)</code>.</p>
+      <p class="lab-check"><strong>Проверка.</strong> На 360 px заголовок имеет размер 24 px, на 600 px — 36 px, на 1000 px — 56 px. Высота блока меняется при изменении высоты окна.</p>
+      <div class="lab-stage task-09">
+        <!-- 09. Добавьте первый экран здесь. -->
+        <div class="hero">
+          <h3>Время путешествий</h3>
+          <p>Здесь начнется новая история</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-card" id="exercise-10">
+      <p class="lab-label">10 · Итоговая сборка</p>
+      <h2>Мини-страница мастерской</h2>
+      <p>Соберите внутри <code>.task-10</code> страницу мастерской. Добавьте заголовок, меню из трёх ссылок, вводный блок с картинкой и три карточки занятий. Ссылки меню могут вести к разделам внутри вашей мини-страницы.</p>
+      <ul>
+        <li>По умолчанию меню, вводный блок и карточки выстроены в одну колонку.</li>
+        <li>От 640 px меню становится горизонтальным, а изображение встаёт рядом с текстом и занимает около 40% ширины вводного блока.</li>
+        <li>От 900 px три карточки стоят в одном ряду. Внутренний контейнер всей мини-страницы имеет ширину 95%, ограничен 900 px и отцентрирован.</li>
+        <li>Отступы задайте в <code>rem</code>. Добавьте достаточно текста в одну карточку, чтобы проверить перенос строк.</li>
+      </ul>
+      <p class="lab-check"><strong>Проверка.</strong> Откройте страницу на 320, 640, 900 и 1280 px. Меню и блоки перестраиваются на нужной ширине, текст переносится, горизонтальной прокрутки нет.</p>
+      <div class="lab-stage task-10">
+        <!-- 10. Соберите мини-страницу здесь. -->
+        <div class="workshop">
+          <h3>Творческая мастерская</h3>
+
+          <nav class="workshop-menu" aria-label="Меню мастерской">
+            <a href="#workshop-about">О мастерской</a>
+            <a href="#workshop-classes">Занятия</a>
+            <a href="#workshop-postcards">Открытки</a>
+          </nav>
+
+          <section class="workshop-intro" id="workshop-about">
+            <img src="mountains.svg" alt="Горный пейзаж">
+            <div>
+              <h4>Создавайте вместе с нами</h4>
+              <p>На занятиях мы пробуем разные материалы, учимся замечать детали и делаем вещи своими руками.</p>
+            </div>
+          </section>
+
+          <section id="workshop-classes" aria-label="Занятия мастерской">
+            <h4>Наши занятия</h4>
+            <div class="workshop-cards">
+              <article class="workshop-card">
+                <h5>Рисунок</h5>
+                <p>Изучаем цвет, линии и простые приёмы работы с красками.</p>
+              </article>
+              <article class="workshop-card">
+                <h5>Коллаж</h5>
+                <p>Собираем композицию из фотографий, бумаги и найденных материалов. Каждый участник может выбрать собственную тему и собрать работу из множества небольших деталей.</p>
+              </article>
+              <article class="workshop-card" id="workshop-postcards">
+                <h5>Открытки</h5>
+                <p>Придумываем иллюстрации и печатаем открытки для друзей.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

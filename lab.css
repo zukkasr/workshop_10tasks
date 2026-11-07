@@ -1,0 +1,74 @@
+/* Оформление практикума. Стили для заданий пишите в student.css. */
+body {
+  margin: 0;
+  color: #222;
+  font: 1rem/1.5 Arial, sans-serif;
+}
+
+.lab-wrap {
+  width: 92%;
+  max-width: 1060px;
+  margin-inline: auto;
+}
+
+.lab-card > ul {
+  padding-inline-start: 1.5rem;
+}
+
+.lab-main {
+  padding-bottom: 2rem;
+}
+
+.lab-card {
+  padding-block: 1.25rem;
+  border-top: 1px solid #ccc;
+}
+
+.lab-card > h2 {
+  margin-block: 0.25rem 0.5rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.lab-card > p,
+.lab-card > ul {
+  max-width: 75ch;
+}
+
+.lab-label {
+  margin: 0;
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.lab-stage {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+.lab-stage:empty {
+  min-height: 2.5rem;
+}
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* Начальный вид заготовок. */
+.task-01 .track {
+  background: #ddd;
+}
+
+.task-01 .meter {
+  height: 24px;
+  background: #315cb0;
+}
+
+.task-02 .note {
+  padding: 12px;
+  background: #eee;
+}
+
+.task-03 .banner {
+  background: #eee;
+}
